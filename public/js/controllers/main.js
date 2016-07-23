@@ -1,4 +1,4 @@
-angular.module('todoController', [])
+angular.module('mezusController', [])
 
 	// inject the Todo service factory into our controller
 	.controller('mainController', ['$scope','$http','Song', function($scope, $http, Song) {

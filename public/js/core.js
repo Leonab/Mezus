@@ -1,1 +1,1 @@
-angular.module('mezus', ['todoController', 'todoService']);
+angular.module('mezus', ['mezusController', 'mezusService']);
