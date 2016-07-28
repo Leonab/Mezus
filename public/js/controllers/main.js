@@ -31,13 +31,14 @@ angular.module('mezusController', [])
 		};
 
 		// DELETE ==================================================================
+		//Delete a particular song
 	/*	$scope.deleteSong = function(id) {
 			$scope.loading = true;
 
-			Todos.delete(id)
+			Song.delete(id)
 				.success(function(data) {
 					$scope.loading = false;
-					$scope.todos = data; // assign our new list of todos
+					$scope.songs = data; // assign our new list of todos
 				});
 		};*/
 	}]);
