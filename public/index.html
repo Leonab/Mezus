@@ -25,7 +25,8 @@
 <!-- SET THE CONTROLLER -->
 <body ng-controller="mainController">
 	<div class="container">
-
+		
+		<!-- Show number of songs -->
 		<div class="jumbotron text-center">
 			<h1>Mezus <span class="label label-info">{{ songs.length }}</span></h1>
 		</div>
@@ -42,6 +43,7 @@
 					</label>
 				</div>
 
+                                <!-- Loading spinner during calls -->
 				<p class="text-center" ng-show="loading">
 					<span class="fa fa-spinner fa-spin fa-3x"></span>
 				</p>
