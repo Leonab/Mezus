@@ -1,4 +1,14 @@
 var Todo = require('./models/todo');
+var multer  = require('multer');
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, '/uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now())
+  }
+})
+
 
 
 /*function getTodos(res) {
@@ -25,7 +35,17 @@ module.exports = function (app) {
 
     // create todo and send back all todos after creation
     app.post('/api/add', function(req, res){
-    
+    var upload = multer({ storage: storage }).single('audio');
+    console.log("yolo");
+    upload(req, res, function (err) {
+    if (err) {
+      // An error occurred when uploading
+      console.log(err);
+      return
+    }
+  console.log(req.body);
+  console.log(req.file);
+    })
   });
 
 

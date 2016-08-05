@@ -46,10 +46,10 @@
 
 				</div>
 
-                                <!-- Loading spinner during calls -->
+                                <!-- Loading spinner during calls >
 				<p class="text-center" ng-hide="loading">
 					<span class="fa fa-spinner fa-spin fa-3x"></span>
-				</p>
+				</p-->
 
 			</div>
 		</div>
@@ -59,8 +59,7 @@
 			<div class="col-sm-8 col-sm-offset-2 text-center">
 				<form id="uploadForm" enctype="multipart/form-data">
 					<div class="form-group">
-
-						<input type="file" class="form-control input-lg text-center" name="audio" ng-model="formData.text">
+                                        <input type="file" class="form-control input-lg text-center" name="audio" ng-model="formData.text">
 					</div>
 
 					<button type="submit" class="btn btn-primary btn-lg" ng-click="addSong()">Add</button>
