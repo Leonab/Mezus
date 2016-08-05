@@ -2,6 +2,7 @@
 var express = require('express');
 //var multer  = require('multer');
 var app = express(); 						// create our app w/ express
+var fs = require('fs');
 var mongoose = require('mongoose'); 				// mongoose for mongodb
 var io = require('socket.io');
 var port = process.env.PORT || 8080; 				// set the port

@@ -1,4 +1,5 @@
 var Todo = require('./models/todo');
+var fs = require('fs');
 
 
 /*function getTodos(res) {
@@ -26,6 +27,16 @@ module.exports = function (app) {
     // create todo and send back all todos after creation
     app.post('/api/add', function(req, res){
     
+    fs.readFile(req.files.audio.path, function (err, data) {
+     // ...
+     console.log(__dirname);
+     var newPath = __dirname + "/uploads/";
+     fs.writeFile(newPath, data, function (err) {
+     res.redirect("back");
+     console.log(res);
+  });
+})
+
   });
 
 

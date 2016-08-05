@@ -17,9 +17,9 @@
 	<!-- SPELLS -->
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
 
-	<script src="js/controllers/main.js"></script>
-	<script src="js/services/todos.js"></script>
-	<script src="js/core.js"></script>
+	<script src="./js/controllers/main.js"></script>
+	<script src="./js/services/songs.js"></script>
+	<script src="./js/core.js"></script>
 
 </head>
 <!-- SET THE CONTROLLER -->
@@ -40,7 +40,7 @@
 				<div class="checkbox" ng-repeat="song in songs">
                                   <audio controls="controls">
                                         <label>
-					 <!--input type="checkbox"--> {{ songs.song }}<source src="yourfilename.mp3" type="audio/mpeg">
+					 <!--input type="checkbox"--> {{ songs.song }}<source src="{{song.name}}.mp3" type="audio/mpeg">
 					</label>
                                   </audio>
 
