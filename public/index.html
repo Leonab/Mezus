@@ -38,13 +38,16 @@
 
 				<!-- LOOP OVER -->
 				<div class="checkbox" ng-repeat="song in songs">
-					<label>
-						<input type="checkbox"> {{ songs.song }}
+                                  <audio controls="controls">
+                                        <label>
+					 <!--input type="checkbox"--> {{ songs.song }}<source src="yourfilename.mp3" type="audio/mpeg">
 					</label>
+                                  </audio>
+
 				</div>
 
                                 <!-- Loading spinner during calls -->
-				<p class="text-center" ng-show="loading">
+				<p class="text-center" ng-hide="loading">
 					<span class="fa fa-spinner fa-spin fa-3x"></span>
 				</p>
 
