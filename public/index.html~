@@ -33,6 +33,11 @@
 
 		<div id="todo-list" class="row">
 			<div class="col-sm-4 col-sm-offset-4">
+<audio controls="controls">
+                                        <label>
+					 <input type="checkbox"> {{ songs.song }}<source src="jj.mp3" type="audio/mpeg">
+					</label>
+                                  </audio>
 
 
 
@@ -40,7 +45,7 @@
 				<div class="checkbox" ng-repeat="song in songs">
                                   <audio controls="controls">
                                         <label>
-					 <!--input type="checkbox"--> {{ songs.song }}<source src="{{song.name}}.mp3" type="audio/mpeg">
+					 <input type="checkbox"> {{ songs.song }}<source src="jj.mp3" type="audio/mpeg">
 					</label>
                                   </audio>
 
@@ -57,12 +62,12 @@
 
 		<div id="todo-form" class="row">
 			<div class="col-sm-8 col-sm-offset-2 text-center">
-				<form id="uploadForm" enctype="multipart/form-data">
+				<form action="/api/add" id="uploadForm" enctype="multipart/form-data">
 					<div class="form-group">
                                         <input type="file" class="form-control input-lg text-center" name="audio" ng-model="formData.text">
 					</div>
 
-					<button type="submit" class="btn btn-primary btn-lg" ng-click="addSong()">Add</button>
+					<button type="submit" class="btn btn-primary btn-lg" ">Add</button>
 				</form>
 			</div>
 		</div>
