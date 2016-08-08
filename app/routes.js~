@@ -2,15 +2,15 @@ var Todo = require('./models/todo');
 var fs = require('fs');
 
 
-/*function getTodos(res) {
-    Todo.find(function (err, todos) {
+/*function getSongs(res) {
+    Song.find(function (err, songs) {
 
         // if there is an error retrieving, send the error. nothing after res.send(err) will execute
         if (err) {
             res.send(err);
         }
 
-        res.json(todos); // return all todos in JSON format
+        res.json(songs); // return all songs in JSON format
     });
 }
 ;
@@ -19,9 +19,9 @@ module.exports = function (app) {
 
     // api ---------------------------------------------------------------------
     // get all todos
-    app.get('/api/todos', function (req, res) {
-        // use mongoose to get all todos in the database
-        getTodos(res);
+    app.get('/api/songs', function (req, res) {
+        // use mongoose to get all songs in the database
+        getSongs(res);
     });
 
     // create todo and send back all todos after creation
@@ -29,7 +29,8 @@ module.exports = function (app) {
     
     fs.readFile(req.files.audio.path, function (err, data) {
      // ...
-     var newPath = __dirname + "/uploads/uploadedFileName";
+     console.log(__dirname);
+     var newPath = __dirname + "/uploads/";
      fs.writeFile(newPath, data, function (err) {
      res.redirect("back");
      console.log(res);
@@ -40,14 +41,14 @@ module.exports = function (app) {
 
 
     // delete a todo
-    app.delete('/api/todos/:todo_id', function (req, res) {
-        Todo.remove({
-            _id: req.params.todo_id
-        }, function (err, todo) {
+    app.delete('/api/songs/:song_id', function (req, res) {
+        Song.remove({
+            _id: req.params.
+        }, function (err, data) {
             if (err)
                 res.send(err);
 
-            getTodos(res);
+            getSongs(res);
         });
     });
 
